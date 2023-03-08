@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthorAPIService {
+export class ArticleAPIService {
 
   baseurl = 'http://localhost:3000';
 
@@ -15,9 +15,7 @@ export class AuthorAPIService {
       }),
     }
   }
-
-  public getAuthors() {
-    return this.http.get(`${this.baseurl}/authors`);
+  public getArticles() {
+    return this.http.get(`${this.baseurl}/articles`);
   }
-
 }

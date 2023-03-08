@@ -1,1 +1,22 @@
-<p>article-list works!</p>
+<h1>
+    List of Articles
+    </h1>
+    <div>
+    <table>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Body</th>
+        <th>Published?</th>
+    </tr>
+    <tr *ngFor="let article of dataSource">
+        <td>{{article.id}}</td>
+        <td>{{article.title}}</td>
+        <td>{{article.description}}</td>
+        <td>{{article.body}}</td>
+        <td>{{article.published}}</td>
+    </tr>
+    </table>
+    
+    </div>

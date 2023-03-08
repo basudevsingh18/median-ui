@@ -1,5 +1,5 @@
-export interface AuthorsInterface {
-    id : number;
-    firstName : string;
-    surname :  string;
+export class AuthorsInterface {
+    // id: number;
+    // firstName: string;
+    // surname: string;
 }

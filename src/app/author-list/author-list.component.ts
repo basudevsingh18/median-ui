@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthorsInterface } from '../interfaces/authors-interface';
 import { AuthorAPIService } from '../services/author-api.service';
 
 @Component({
@@ -9,17 +8,19 @@ import { AuthorAPIService } from '../services/author-api.service';
 })
 export class AuthorListComponent implements OnInit{
   
-  AuthorList : any = [];
+  dataSource : any = [];
+  author = {};
 
-  ngOnInit(): void {
+  ngOnInit() {
       this.getAuthors();
     }
 
   constructor(private authorApiService: AuthorAPIService) {}
 
   getAuthors() {
-    this.authorApiService.getAuthors().subscribe((data: {}) => {
-      this.AuthorList = data;
-    });
+    this.authorApiService.getAuthors().subscribe((result)=>{
+      this.dataSource = result;
+    })
   }
 }
+
